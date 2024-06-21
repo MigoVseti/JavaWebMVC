@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<div th:each="item : ${item}">
+    <a th:href="@{/item/{id}(id=${item.getId()})}"
+       th:text="${item.getName() + ', ' + person.Cost()}">item</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/item/new">Create new item</a><br/>
+<a href="/">Go home</a><br/>
+
+</body>
+</html>
